@@ -43,7 +43,7 @@ tape( 'the function converts a signed 64-bit integer byte array to a double-prec
 	var f;
 
 	f = proxyquire( './../lib/main.js', {
-		'@stdlib/assert/is-little-endian': false
+		'@stdlib/assert-is-little-endian': false
 	});
 
 	expected = 0;
@@ -81,7 +81,7 @@ tape( 'the function converts a signed 64-bit integer byte array to a double-prec
 	var f;
 
 	f = proxyquire( './../lib/main.js', {
-		'@stdlib/assert/is-little-endian': true
+		'@stdlib/assert-is-little-endian': true
 	});
 
 	expected = 0;
@@ -119,7 +119,7 @@ tape( 'the function supports specifying a stride (big endian; two\'s complement)
 	var f;
 
 	f = proxyquire( './../lib/main.js', {
-		'@stdlib/assert/is-little-endian': false
+		'@stdlib/assert-is-little-endian': false
 	});
 
 	expected = 0;
@@ -157,7 +157,7 @@ tape( 'the function supports specifying a stride (little endian; two\'s compleme
 	var f;
 
 	f = proxyquire( './../lib/main.js', {
-		'@stdlib/assert/is-little-endian': true
+		'@stdlib/assert-is-little-endian': true
 	});
 
 	expected = 0;
@@ -195,7 +195,7 @@ tape( 'the function supports specifying an index offset (big endian; two\'s comp
 	var f;
 
 	f = proxyquire( './../lib/main.js', {
-		'@stdlib/assert/is-little-endian': false
+		'@stdlib/assert-is-little-endian': false
 	});
 
 	expected = 0;
@@ -233,7 +233,7 @@ tape( 'the function supports specifying an index offset (little endian; two\'s c
 	var f;
 
 	f = proxyquire( './../lib/main.js', {
-		'@stdlib/assert/is-little-endian': true
+		'@stdlib/assert-is-little-endian': true
 	});
 
 	expected = 0;
