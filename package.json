@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/number-float64-base-from-int64-bytes",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Convert a signed 64-bit integer byte array to a double-precision floating-point number.",
   "license": "Apache-2.0",
   "author": {
