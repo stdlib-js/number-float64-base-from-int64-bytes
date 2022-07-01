@@ -24,32 +24,30 @@ limitations under the License.
 
 > Convert a signed 64-bit integer byte array to a [double-precision floating-point number][ieee754].
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/number-float64-base-from-int64-bytes
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-fromInt64Bytes = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-from-int64-bytes@umd/bundle.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-from-int64-bytes@umd/bundle.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.fromInt64Bytes;
-})();
-</script>
+var fromInt64Bytes = require( '@stdlib/number-float64-base-from-int64-bytes' );
 ```
 
 #### fromInt64Bytes( bytes, stride, offset )
@@ -96,17 +94,12 @@ var out = fromInt64Bytes( bytes, 2, 1 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-little-endian@umd/bundle.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/bundle.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-bernoulli@umd/bundle.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-uint8@umd/bundle.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-from-int64-bytes@umd/bundle.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var IS_LITTLE_ENDIAN = require( '@stdlib/assert-is-little-endian' );
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' );
+var bernoulli = require( '@stdlib/random-base-bernoulli' );
+var Uint8Array = require( '@stdlib/array-uint8' );
+var fromInt64Bytes = require( '@stdlib/number-float64-base-from-int64-bytes' );
 
 var bytes;
 var sgn;
@@ -143,11 +136,6 @@ for ( i = 0; i < 10; i++ ) {
     x = fromInt64Bytes( bytes, 1, 0 );
     console.log( bytes + ' => ' + x );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -227,6 +215,7 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 [deno-url]: https://github.com/stdlib-js/number-float64-base-from-int64-bytes/tree/deno
 [umd-url]: https://github.com/stdlib-js/number-float64-base-from-int64-bytes/tree/umd
 [esm-url]: https://github.com/stdlib-js/number-float64-base-from-int64-bytes/tree/esm
+[branches-url]: https://github.com/stdlib-js/number-float64-base-from-int64-bytes/blob/main/branches.md
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/number-float64-base-from-int64-bytes/main/LICENSE
 
