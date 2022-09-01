@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2021 The Stdlib Authors.
@@ -16,27 +16,34 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 2.0
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { NumericArray } from '@stdlib/types/array';
 
 /**
-* Convert a signed 64-bit integer byte array to a double-precision floating-point number.
+* Converts a signed 64-bit integer byte array to a double-precision floating-point number.
 *
-* @module @stdlib/number-float64-base-from-int64-bytes
+* ## Notes
+*
+* -   The function assumes host byte order (endianness).
+*
+* @param bytes - byte array
+* @param stride - index stride
+* @param offset - index offset
+* @returns double-precision floating-point number
 *
 * @example
-* var Uint8Array = require( '@stdlib/array-uint8' );
-* var fromInt64Bytes = require( '@stdlib/number-float64-base-from-int64-bytes' );
+* var Uint8Array = require( `@stdlib/array/uint8` );
 *
 * var bytes = new Uint8Array( [ 255, 255, 255, 255, 255, 255, 255, 255 ] );
-* var x = fromInt64ByteArray( bytes, 1, 0 );
+* var x = fromInt64Bytes( bytes, 1, 0 );
 * // returns -1.0
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function fromInt64Bytes( bytes: NumericArray, stride: number, offset: number ): number; // tslint:disable-line:max-line-length
 
 
 // EXPORTS //
 
-module.exports = main;
+export = fromInt64Bytes;
