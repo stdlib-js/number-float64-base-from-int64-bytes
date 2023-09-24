@@ -18,20 +18,47 @@ limitations under the License.
 
 -->
 
+
+<details>
+  <summary>
+    About stdlib...
+  </summary>
+  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
+  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
+  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
+  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
+</details>
+
 # fromInt64Bytes
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
 > Convert a signed 64-bit integer byte array to a [double-precision floating-point number][ieee754].
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/number-float64-base-from-int64-bytes
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import fromInt64Bytes from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-from-int64-bytes@deno/mod.js';
+var fromInt64Bytes = require( '@stdlib/number-float64-base-from-int64-bytes' );
 ```
 
 #### fromInt64Bytes( bytes, stride, offset )
@@ -39,7 +66,7 @@ import fromInt64Bytes from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64
 Converts a signed 64-bit integer byte array to a [double-precision floating-point number][ieee754].
 
 ```javascript
-import Uint8Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-uint8@deno/mod.js';
+var Uint8Array = require( '@stdlib/array-uint8' );
 
 var bytes = new Uint8Array( [ 255, 255, 255, 255, 255, 255, 255, 255 ] );
 var out = fromInt64Bytes( bytes, 1, 0 );
@@ -51,7 +78,7 @@ The function supports providing a `stride` and an index `offset` for indexing in
 <!-- eslint-disable max-len -->
 
 ```javascript
-import Uint8Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-uint8@deno/mod.js';
+var Uint8Array = require( '@stdlib/array-uint8' );
 
 var bytes = new Uint8Array( [ 0, 255, 0, 255, 0, 255, 0, 255, 0, 255, 0, 255, 0, 255, 0, 255 ] );
 var out = fromInt64Bytes( bytes, 2, 1 );
@@ -79,11 +106,11 @@ var out = fromInt64Bytes( bytes, 2, 1 );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import IS_LITTLE_ENDIAN from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-little-endian@deno/mod.js';
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@deno/mod.js';
-import bernoulli from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-bernoulli@deno/mod.js';
-import Uint8Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-uint8@deno/mod.js';
-import fromInt64Bytes from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-from-int64-bytes@deno/mod.js';
+var IS_LITTLE_ENDIAN = require( '@stdlib/assert-is-little-endian' );
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' );
+var bernoulli = require( '@stdlib/random-base-bernoulli' );
+var Uint8Array = require( '@stdlib/array-uint8' );
+var fromInt64Bytes = require( '@stdlib/number-float64-base-from-int64-bytes' );
 
 var bytes;
 var sgn;
@@ -143,7 +170,7 @@ for ( i = 0; i < 10; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -173,8 +200,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/number-float64-base-from-int64-bytes.svg
 [npm-url]: https://npmjs.org/package/@stdlib/number-float64-base-from-int64-bytes
 
-[test-image]: https://github.com/stdlib-js/number-float64-base-from-int64-bytes/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/number-float64-base-from-int64-bytes/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/number-float64-base-from-int64-bytes/actions/workflows/test.yml/badge.svg?branch=v0.1.0
+[test-url]: https://github.com/stdlib-js/number-float64-base-from-int64-bytes/actions/workflows/test.yml?query=branch:v0.1.0
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/number-float64-base-from-int64-bytes/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/number-float64-base-from-int64-bytes?branch=main
