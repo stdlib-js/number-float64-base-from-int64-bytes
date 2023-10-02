@@ -35,43 +35,30 @@ limitations under the License.
 
 > Convert a signed 64-bit integer byte array to a [double-precision floating-point number][ieee754].
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/number-float64-base-from-int64-bytes
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-fromInt64Bytes = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-from-int64-bytes@umd/browser.js' )
-```
-The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/number-float64-base-from-int64-bytes/tags). For example,
-
-```javascript
-fromInt64Bytes = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-from-int64-bytes@v0.1.0-umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var fromInt64Bytes = require( 'path/to/vendor/umd/number-float64-base-from-int64-bytes/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-from-int64-bytes@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.fromInt64Bytes;
-})();
-</script>
+var fromInt64Bytes = require( '@stdlib/number-float64-base-from-int64-bytes' );
 ```
 
 #### fromInt64Bytes( bytes, stride, offset )
@@ -118,17 +105,12 @@ var out = fromInt64Bytes( bytes, 2, 1 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-little-endian@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-bernoulli@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-uint8@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-from-int64-bytes@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var IS_LITTLE_ENDIAN = require( '@stdlib/assert-is-little-endian' );
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' );
+var bernoulli = require( '@stdlib/random-base-bernoulli' );
+var Uint8Array = require( '@stdlib/array-uint8' );
+var fromInt64Bytes = require( '@stdlib/number-float64-base-from-int64-bytes' );
 
 var bytes;
 var sgn;
@@ -165,11 +147,6 @@ for ( i = 0; i < 10; i++ ) {
     x = fromInt64Bytes( bytes, 1, 0 );
     console.log( bytes + ' => ' + x );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -223,8 +200,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/number-float64-base-from-int64-bytes.svg
 [npm-url]: https://npmjs.org/package/@stdlib/number-float64-base-from-int64-bytes
 
-[test-image]: https://github.com/stdlib-js/number-float64-base-from-int64-bytes/actions/workflows/test.yml/badge.svg?branch=v0.1.0
-[test-url]: https://github.com/stdlib-js/number-float64-base-from-int64-bytes/actions/workflows/test.yml?query=branch:v0.1.0
+[test-image]: https://github.com/stdlib-js/number-float64-base-from-int64-bytes/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/number-float64-base-from-int64-bytes/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/number-float64-base-from-int64-bytes/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/number-float64-base-from-int64-bytes?branch=main
