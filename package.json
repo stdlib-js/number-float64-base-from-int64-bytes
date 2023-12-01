@@ -40,10 +40,10 @@
     "@stdlib/array-dataview": "^0.1.0",
     "@stdlib/array-uint8": "^0.1.1",
     "@stdlib/assert-is-little-endian": "^0.1.1",
-    "@stdlib/types": "^0.1.0"
+    "@stdlib/types": "^0.2.0"
   },
   "devDependencies": {
-    "@stdlib/bench": "^0.1.0",
+    "@stdlib/bench": "^0.2.1",
     "@stdlib/math-base-assert-is-nan": "^0.1.1",
     "@stdlib/random-base-bernoulli": "^0.1.0",
     "@stdlib/random-base-discrete-uniform": "^0.1.0",
