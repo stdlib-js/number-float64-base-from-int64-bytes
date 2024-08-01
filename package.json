@@ -37,7 +37,7 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/array-dataview": "^0.2.1",
+    "@stdlib/array-dataview": "^0.2.2",
     "@stdlib/array-uint8": "^0.2.2",
     "@stdlib/assert-is-little-endian": "^0.2.2",
     "@stdlib/types": "^0.3.2"
