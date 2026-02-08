@@ -44,7 +44,7 @@ limitations under the License.
 To use in Observable,
 
 ```javascript
-fromInt64Bytes = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-from-int64-bytes@umd/browser.js' )
+fromInt64Bytes = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-from-int64-bytes@v0.2.3-umd/browser.js' )
 ```
 
 To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
@@ -56,7 +56,7 @@ var fromInt64Bytes = require( 'path/to/vendor/umd/number-float64-base-from-int64
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-from-int64-bytes@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-from-int64-bytes@v0.2.3-umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -121,7 +121,7 @@ var out = fromInt64Bytes( bytes, 2, 1 );
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-bernoulli@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-uint8@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-from-int64-bytes@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-from-int64-bytes@v0.2.3-umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
